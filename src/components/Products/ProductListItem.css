@@ -1,0 +1,66 @@
+.service-img {
+    display: block;
+    text-align: center;
+}
+
+.service-img img {
+    height: 360px;
+    width: 100%;
+}
+
+.service-price {
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 0 15px 0;
+    color: green;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category button {
+    text-transform: none;
+}
+
+.category button:hover {
+    background-color: #d7eefa;
+}
+
+.service-quantity p {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.service-quantity,
+.service-quantity input {
+    text-align: center;
+}
+
+.service-quantity button {
+    padding: 7px 15px;
+}
+
+.btn-wrap {
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+
+.menu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    list-style: none;
+    display: none;
+}
+
+.menu:hover .submenu {
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 15%;
+    list-style: none;
+}
