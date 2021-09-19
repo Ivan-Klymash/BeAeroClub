@@ -31,12 +31,13 @@ const Main = ({
                             </>
                         )}
                     />
-                    <OfferPage />
-                    <Route path="/news" component={NewsPage} />
-                    <Route path="/story" component={StoryPage} />
-                    <Route path="/contact" component={ContactPage} />
+
+                    <Route path="/news" exact component={NewsPage} />
+                    <Route path="/story" exact component={StoryPage} />
+                    <Route path="/contact" exact component={ContactPage} />
                     <Route
                         path="/cart"
+                        exact
                         render={() => (
                             <CartPage
                                 productsInCart={productsInCart}
@@ -45,8 +46,9 @@ const Main = ({
                             />
                         )}
                     />
-                    <Route path="/products/:id" component={ProductPage} />
+                    <Route path="/products/:id" exact component={ProductPage} />
                 </Switch>
+                <OfferPage />
             </Container>
         </>
     )

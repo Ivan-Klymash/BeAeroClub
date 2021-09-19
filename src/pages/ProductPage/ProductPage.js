@@ -12,8 +12,14 @@ const ProductPage = ({
     const id = match.params.id
     return (
         <>
-            <h1> Products Page {productsObj[id].name}</h1>
-            <div>{productsObj[id].image}</div>
+            <h1> Products Page </h1>
+            <h2> {productsObj[id].name} </h2>
+            <div
+                dangerouslySetInnerHTML={{ __html: productsObj[id].image }}
+            ></div>
+            <p
+                dangerouslySetInnerHTML={{ __html: productsObj[id].showImages }}
+            ></p>
         </>
     )
 }

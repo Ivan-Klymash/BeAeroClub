@@ -8,9 +8,9 @@ const OfferPage = () => {
     return (
         <>
             <Switch>
-                <Route path="/flights" component={Flights} />
-                <Route path="/adrenalin" component={Adrenalin} />
-                <Route path="/recreation" component={Recreation} />
+                <Route path="/flights" exact component={Flights} />
+                <Route path="/adrenalin" exact component={Adrenalin} />
+                <Route path="/recreation" exact component={Recreation} />
             </Switch>
         </>
     )

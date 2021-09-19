@@ -3,6 +3,8 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Header from './Header/Header'
 import Main from './Main/Main'
 import { omit } from 'lodash'
+import Footer from './Footer/Footer'
+// import Slider from './Main/Slider/Slider'
 
 const App = () => {
     const [productsInCart, setProductsInCart] = useState({
@@ -32,12 +34,14 @@ const App = () => {
         <>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
+            {/* <Slider /> */}
             <Main
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
                 changeProductQuantity={changeProductQuantity}
             />
+            <Footer />
         </>
     )
 }
