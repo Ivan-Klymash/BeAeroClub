@@ -99,4 +99,21 @@ const MapStateToProps = (state, { product }) => ({
     isLiked: state.likeButtonsState[product.id],
 })
 
-export default connect(MapStateToProps)(CartProductListItemExtended)
+const mapDispatchToProps = (dispatch) => ({
+    removeProductFromCart: (id) =>
+        dispatch({
+            type: 'REMOVE_PRODUCT_FROM_CART',
+            id,
+        }),
+    changeProductQuantity: (id, count) =>
+        dispatch({
+            type: 'CHANGE_PRODUCT_QUANTITY',
+            id,
+            count,
+        }),
+})
+
+export default connect(
+    MapStateToProps,
+    mapDispatchToProps
+)(CartProductListItemExtended)

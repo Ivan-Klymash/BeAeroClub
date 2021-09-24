@@ -1,0 +1,138 @@
+.story {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 75px;
+    background-image: url(https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-home-parachute.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
+.container-story {
+    max-width: 1060px;
+    width: 100%;
+    margin: 0 auto;
+}
+.row-story {
+    display: flex;
+}
+.half-a-page {
+    width: 50%;
+    margin: 0 1% 40px;
+}
+.story-text {
+    width: 81.333%;
+}
+.story-text-title {
+    padding-top: 50px;
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #0d2156;
+    font-family: "Expletus Sans", sans-serif;
+    margin-bottom: 15px;
+}
+.story-text-paragraph {
+    margin: 0 0 15px;
+    color: #293e72;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.story-text a {
+    color: #0d2156;
+    text-decoration: none;
+    outline: 0;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.story-text a:hover {
+    color: #007cc3;
+    text-decoration: underline;
+}
+.story-photo {
+    max-width: 100%;
+    height: 410px;
+    background-image: url(../../../assets/background-images/story-photo.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.what-we-do {
+    width: 100%;
+}
+.aeroclub-logo {
+    padding-top: calc(118px + 50px);
+    background-image: url(../../../assets/background-images/aeroclub-logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+}
+.what-we-do-text p {
+    color: #0d2156;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-family: "Expletus Sans", sans-serif;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.what-we-do-text {
+    margin-bottom: 10px;
+}
+.what-we-do-button {
+    display: flex; flex-wrap: wrap;
+}
+.what-we-do-left-button {
+    width: 48%;
+    margin: 0 1% 40px;
+    text-align: right;
+}
+.what-we-do-left-button  a {
+    background-color: #ff0e0e;
+    color: #fff;
+    margin: 0 10px 15px 0;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    font-size: inherit;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    /* border-style: solid; */
+    transition: color .1s ease-in-out,
+    background-color .1s ease-in-out,
+    border-color .1s ease-in-out;
+}
+.what-we-do-right-button {
+    width: 48%;
+    margin: 0 1% 40px;
+    text-align: left;
+}
+.what-we-do-right-button  a {
+/* background-color: #0095eb; */
+    color: white;
+    background-color: #b9c6d1;
+    color: #0d2156;
+    margin: 0 10px 15px 0;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    font-size: inherit;
+    overflow: hidden;
+    text-decoration: none!important;
+    cursor: pointer;
+    /* border-style: solid; */
+    transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
+}
+.what-we-do-left-button:hover {
+    opacity: 0.5;
+}
+.what-we-do-right-button:hover {
+    opacity: 0.5;
+}

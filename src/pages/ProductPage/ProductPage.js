@@ -14,9 +14,6 @@ const ProductPage = ({
         <>
             <h1> Products Page </h1>
             <h2> {productsObj[id].name} </h2>
-            <div
-                dangerouslySetInnerHTML={{ __html: productsObj[id].image }}
-            ></div>
             <p
                 dangerouslySetInnerHTML={{ __html: productsObj[id].showImages }}
             ></p>

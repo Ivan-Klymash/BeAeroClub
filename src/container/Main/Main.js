@@ -9,13 +9,12 @@ import NewsPage from '../../pages/NewsPage/NewsPage'
 import StoryPage from '../../pages/StoryPage/StoryPage'
 import ContactPage from '../../pages/ContactPage/ContactPage'
 import ProductPage from '../../pages/ProductPage/ProductPage'
+import CheckoutPage from '../../pages/CheckoutPage/CheckoutPage'
+import StorySection from './StorySection/StorySection'
+import LearnToFlySection from './LearnToFlySection/LearnToFlySection'
+import OfferSection from './OfferSection/OfferSection'
 
-const Main = ({
-    addProductToCart,
-    productsInCart,
-    removeProductFromCart,
-    changeProductQuantity,
-}) => {
+const Main = () => {
     return (
         <>
             <Container>
@@ -25,31 +24,22 @@ const Main = ({
                         exact
                         render={() => (
                             <>
-                                <ProductsList
-                                    addProductToCart={addProductToCart}
-                                />
+                                <ProductsList />
                             </>
                         )}
                     />
-
                     <Route path="/news" exact component={NewsPage} />
                     <Route path="/story" exact component={StoryPage} />
                     <Route path="/contact" exact component={ContactPage} />
-                    <Route
-                        path="/cart"
-                        exact
-                        render={() => (
-                            <CartPage
-                                productsInCart={productsInCart}
-                                removeProductFromCart={removeProductFromCart}
-                                changeProductQuantity={changeProductQuantity}
-                            />
-                        )}
-                    />
+                    <Route path="/cart" exact component={CartPage} />
                     <Route path="/products/:id" exact component={ProductPage} />
+                    <Route path="/checkout" component={CheckoutPage} />
                 </Switch>
                 <OfferPage />
             </Container>
+            <Route path="/" exact component={StorySection} />
+            <Route path="/" exact component={LearnToFlySection} />
+            <Route path="/" exact component={OfferSection} />
         </>
     )
 }

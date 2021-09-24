@@ -1,0 +1,37 @@
+.learn-to-fly {
+    background-image: url(/src/assets/background-images/learn-to-fly.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0px;
+    min-height: 724px;
+    background-size: cover;
+}
+.learn-to-fly-text {
+    max-width: 1060px;
+    width: 100%;
+    padding-top: 225.9px;
+    padding-bottom: 205.9px;
+    margin: 0 auto;
+}
+.fly-column {
+    width: 48%;
+    margin: 0 1% 40px;
+}
+.fly-column h1 {
+    font-family: "Expletus Sans", sans-serif;
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.fly-column p {
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 15px;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #fff
+}

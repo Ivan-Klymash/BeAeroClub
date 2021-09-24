@@ -5,12 +5,9 @@ import CartTotal from '../../components/Cart/CartTotal'
 import CartProductList from '../../components/Cart/CartProductList'
 import CartProductListItemExtended from '../../components/Cart/CartProductListItemExtended'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-const CartPage = ({
-    productsInCart,
-    removeProductFromCart,
-    changeProductQuantity,
-}) => {
+const CartPage = ({ productsInCart }) => {
     return (
         <>
             <h1>Cart Page</h1>
@@ -18,11 +15,10 @@ const CartPage = ({
                 <CartProductList
                     productsInCart={productsInCart}
                     CartItem={CartProductListItemExtended}
-                    removeProductFromCart={removeProductFromCart}
-                    changeProductQuantity={changeProductQuantity}
                 />
             </Grid>
             <CartTotal productsInCart={productsInCart} />
+            <Link to="/checkout"> Proceed to checkout </Link>
         </>
     )
 }

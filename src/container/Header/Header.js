@@ -22,7 +22,7 @@ const Header = ({ productsInCart, likesNumber }) => {
     const classes = useStyles()
 
     return (
-        <AppBar position="static">
+        <AppBar position="sticky">
             <Toolbar className={classes.toolBar}>
                 {/* <IconButton
                     edge="start"
@@ -32,7 +32,7 @@ const Header = ({ productsInCart, likesNumber }) => {
                 >
                     <MenuIcon />
                 </IconButton> */}
-                <Logo />
+                <Logo id="top" />
                 <Menu likesNumber={likesNumber} />
                 <Cart productsInCart={productsInCart} />
             </Toolbar>
