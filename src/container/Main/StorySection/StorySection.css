@@ -54,7 +54,7 @@
     text-decoration: underline;
 }
 .story-photo {
-    max-width: 100%;
+    width: 100%;
     height: 410px;
     background-image: url(../../../assets/background-images/story-photo.png);
     background-repeat: no-repeat;
@@ -115,7 +115,6 @@
     text-align: left;
 }
 .what-we-do-right-button  a {
-/* background-color: #0095eb; */
     color: white;
     background-color: #b9c6d1;
     color: #0d2156;
@@ -127,7 +126,6 @@
     overflow: hidden;
     text-decoration: none!important;
     cursor: pointer;
-    /* border-style: solid; */
     transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
 }
 .what-we-do-left-button:hover {

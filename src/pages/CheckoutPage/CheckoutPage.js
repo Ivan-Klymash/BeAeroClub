@@ -23,10 +23,13 @@ class CheckoutPage extends Component {
     sendForm = (e) => {
         e.preventDefault()
         axios
-            .post('', {
-                name: this.state.name,
-                address: this.state.address,
-            })
+            .post(
+                'https://my-json-server.typicode.com/kznkv-skillup/server/orders',
+                {
+                    name: this.state.name,
+                    address: this.state.address,
+                }
+            )
             .then((res) => res.data)
             .then(({ name, address }) =>
                 this.setState({
@@ -41,7 +44,7 @@ class CheckoutPage extends Component {
         return (
             <div className="form-order">
                 <h2>Checkout Form </h2>
-                <form>
+                <form onSubmit={this.sendForm}>
                     <div>
                         <input
                             type="text"

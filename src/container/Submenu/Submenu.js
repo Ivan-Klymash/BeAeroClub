@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
         textDecoration: 'none',
         listStyle: 'none',
         display: 'block',
-        padding: '5px',
+        padding: '6px',
         textAlign: 'center',
         '&:hover': {
             color: '#048bda',

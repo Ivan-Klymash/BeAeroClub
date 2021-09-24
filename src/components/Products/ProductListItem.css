@@ -56,11 +56,23 @@
     position: absolute;
     list-style: none;
     display: none;
+    width:100% ;
 }
 
 .menu:hover .submenu {
     display: block;
     background-color: whitesmoke;
-    border-radius: 15%;
+    border-radius: 5%;
     list-style: none;
+    width:105%;
+}
+/* щоб при наведенні на пункти підменю сам пункт меню був активний */
+.menu:hover {
+    background-color: #048bda;
+    border-radius: 6px;
+}
+
+.show-images {
+    height: 350px;
+    width: 300px;
 }

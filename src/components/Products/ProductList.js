@@ -4,8 +4,9 @@ import { makeStyles } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import ProductListItem from './ProductListItem'
 import Line from './Line'
-import productsArray from './productsArray'
+// import productsArray from './productsArray'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 const useStyles = makeStyles({
     aboutColumn: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles({
     },
 })
 
-const ProductsList = () => {
+const ProductsList = ({ productsArray }) => {
     const classes = useStyles()
     return (
         <>
@@ -102,6 +103,11 @@ const ProductsList = () => {
 ProductsList.propTypes = {
     addProductToCart: PropTypes.func,
     changeLike: PropTypes.func,
+    productsArray: PropTypes.array,
 }
 
-export default ProductsList
+const mapStateToProps = (state) => ({
+    productsArray: state.products,
+})
+
+export default connect(mapStateToProps)(ProductsList)
