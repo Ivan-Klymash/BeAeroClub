@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(() => ({
     line: {
         textAlign: 'center',
-        height: '121px',
+        height: '50px',
         margin: '0 1% 40px',
     },
 }))

@@ -6,6 +6,7 @@ import Footer from './Footer/Footer'
 import { useDispatch } from 'react-redux'
 import { fetchProducts } from '../redux/products.action'
 // import Slider from './Main/Slider/Slider'
+import Slider from './Main/Slider/Carousel'
 
 const App = () => {
     useEffect(() => {
@@ -18,6 +19,7 @@ const App = () => {
         <>
             <CssBaseline />
             <Header />
+            <Slider />
             {/* <Slider /> */}
             <Main />
             <Footer />

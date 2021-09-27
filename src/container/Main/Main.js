@@ -28,6 +28,7 @@ const Main = () => {
                             </>
                         )}
                     />
+                    <OfferPage />
                     <Route path="/news" exact component={NewsPage} />
                     <Route path="/story" exact component={StoryPage} />
                     <Route path="/contact" exact component={ContactPage} />
@@ -35,7 +36,6 @@ const Main = () => {
                     <Route path="/products/:id" exact component={ProductPage} />
                     <Route path="/checkout" component={CheckoutPage} />
                 </Switch>
-                <OfferPage />
             </Container>
             <Route path="/" exact component={StorySection} />
             <Route path="/" exact component={LearnToFlySection} />

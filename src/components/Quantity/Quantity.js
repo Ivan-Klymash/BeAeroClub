@@ -11,7 +11,7 @@ const Quantity = ({
 }) => {
     return (
         <div className="service-quantity">
-            <p>Quantity: </p>
+            <p> Quantity: </p>
             <Button
                 variant="outlined"
                 color="primary"
@@ -20,7 +20,12 @@ const Quantity = ({
             >
                 -
             </Button>
-            <TextField variant="outlined" size="small" value={count} />
+            <TextField
+                variant="outlined"
+                size="small"
+                style={{ top: 0 }}
+                value={count}
+            />
             <Button
                 variant="outlined"
                 color="primary"

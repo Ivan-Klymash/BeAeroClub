@@ -1,7 +1,7 @@
 import React from 'react'
 import '../OfferSection/OfferSection.css'
 
-const StorySection = () => {
+const OfferSection = () => {
     return (
         <section className="offer">
             <div className="image-links">
@@ -47,4 +47,4 @@ const StorySection = () => {
     )
 }
 
-export default StorySection
+export default OfferSection

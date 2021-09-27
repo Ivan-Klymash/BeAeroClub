@@ -21,7 +21,7 @@
         "age": "from 12 years",
         "price": 50,
         "image": "https://raw.githubusercontent.com/Ivan-Klymash/BeAeroClub/master/public/images/climbing-version-1.jpg",
-        "category": "emotions",
+        "category": "adrenalin",
         "showImages": "<img class='show-images' src=https://raw.githubusercontent.com/Ivan-Klymash/BeAeroClub/master/public/images/climbing-version-1.jpg />"
        },
        {

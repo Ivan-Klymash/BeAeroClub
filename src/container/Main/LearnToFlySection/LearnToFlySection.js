@@ -1,10 +1,10 @@
 import React from 'react'
 import '../LearnToFlySection/LearnToFlySection.css'
 
-const StorySection = () => {
+const LearnToFlySection = () => {
     return (
         <section className="learn-to-fly">
-            <div clclassNameass="learn-to-fly-page">
+            <div className="learn-to-fly-page">
                 <div className="learn-to-fly-text">
                     <div className="fly-column">
                         <h1>Learn to fly</h1>
@@ -28,4 +28,4 @@ const StorySection = () => {
     )
 }
 
-export default StorySection
+export default LearnToFlySection

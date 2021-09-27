@@ -8,7 +8,7 @@ const ProductPage = ({
     match,
     productsObj = getProductsObj(productsArray),
 }) => {
-    console.log(match)
+    // console.log(match)
     const id = match.params.id
     return (
         <>
