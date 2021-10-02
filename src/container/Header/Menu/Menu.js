@@ -33,7 +33,7 @@ const useStyles = makeStyles(() => ({
             color: 'white',
         },
     },
-    '@media screen and (max-width: 426px)': {
+    '@media screen and (max-width: 769px)': {
         menu: {
             display: 'none',
             fontSize: 12,

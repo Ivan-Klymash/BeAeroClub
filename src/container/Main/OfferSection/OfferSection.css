@@ -23,7 +23,7 @@
     transition: all 1s;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
     .offer {
         flex-direction: column;
     }

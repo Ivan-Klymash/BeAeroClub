@@ -134,7 +134,7 @@
     opacity: 0.5;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
     .row-story {
         display: block;
     }
@@ -234,7 +234,7 @@
     height: 90vh;
     width: 100%;
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
     .MuiGrid-spacing-xs-2 {
         width: 90% ;
         margin: 0px;

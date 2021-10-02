@@ -80,7 +80,7 @@
     width: 300px;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
     .service-quantity button {
         padding: 7px 30px;
     }

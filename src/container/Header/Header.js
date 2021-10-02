@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     newMenuButton: {
         marginRight: theme.spacing(2),
     },
-    '@media (min-width: 426px)': {
+    '@media (min-width: 769px)': {
         newMenuButton: {
             display: 'none',
         },

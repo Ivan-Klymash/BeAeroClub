@@ -41,7 +41,7 @@ const useStyles = makeStyles({
         animation: 'zoomIn',
         animationDuration: '4s',
     },
-    '@media (max-width: 426px)': {
+    '@media (max-width: 769px)': {
         newsBackgroundImg: {
             height: 'auto',
             padding: '120px 0',

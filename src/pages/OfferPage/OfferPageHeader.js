@@ -18,7 +18,7 @@ const useStyles = makeStyles({
             transition: 'transform 1s',
         },
     },
-    '@media (max-width: 426px)': {
+    '@media (max-width: 769px)': {
         offer: {
             height: '414px',
         },

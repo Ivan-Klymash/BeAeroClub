@@ -35,7 +35,7 @@ const useStyles = makeStyles({
         margin: '0 1% 40px',
     },
 
-    '@media (max-width: 426px)': {
+    '@media (max-width: 769px)': {
         aboutLeftColumnText: {
             margin: '0px 20px 0px 40px',
         },

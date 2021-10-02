@@ -62,7 +62,7 @@ const useStyles = makeStyles({
         width: '100%',
         padding: '10px 60px',
     },
-    '@media (max-width: 426px)': {
+    '@media (max-width: 769px)': {
         contactImages: {
             display: 'none',
         },
