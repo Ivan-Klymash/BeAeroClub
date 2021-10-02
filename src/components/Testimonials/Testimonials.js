@@ -5,11 +5,13 @@ import React, { useState } from 'react'
 
 const useStyles = makeStyles({
     cardWrap: {
-        margin: '20px 0',
+        margin: '20px',
         padding: 10,
     },
     inputField: {
-        marginBottom: 20,
+        marginBottom: 24,
+        textTransform: 'capitalize',
+        boxShadow: '8px 8px 8px rgba(0,0,0,0.7)',
     },
 })
 
@@ -61,15 +63,31 @@ const Testemonials = () => {
 
     return (
         <>
-            <h2>Testimonials</h2>
+            <h2 style={{ textAlign: 'center', marginTop: 30 }}>
+                Testimonials:
+            </h2>
             {testimonials.map(({ name, text }, i) => (
                 <Card key={i} className={classes.cardWrap}>
                     <h4>{name}</h4>
                     <p>{text}</p>
                 </Card>
             ))}
+            <hr />
 
-            <form onSubmit={onSend}>
+            <form
+                onSubmit={onSend}
+                style={{
+                    margin: '0px 20px',
+                    border: '20px solid white',
+                    borderRadius: '10px',
+                    borderImage:
+                        'repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px) 60',
+
+                    // backgroundColor: 'rgb(208, 221, 238)',
+                    textAlign: 'center',
+                }}
+            >
+                <p style={{ fontSize: 17 }}>Leave your feedback:</p>
                 <div>
                     <TextField
                         label="Your name"
@@ -98,6 +116,9 @@ const Testemonials = () => {
                 >
                     Leave a comment
                 </Button>
+                <p>
+                    <i>Thanks for the feedback. You help us become better.</i>
+                </p>
             </form>
         </>
     )

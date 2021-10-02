@@ -22,3 +22,13 @@
     transform: scale(1.05);
     transition: all 1s;
 }
+
+@media screen and (max-width: 426px) {
+    .offer {
+        flex-direction: column;
+    }
+    .image-links {
+        width: 94%;
+        margin: 0 auto;
+    }
+}

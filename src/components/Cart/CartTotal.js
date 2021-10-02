@@ -13,7 +13,7 @@ const CartTotal = ({
         return null
     } else {
         return (
-            <div>
+            <div style={{ backgroundColor: 'rgb(208 221 238)' }}>
                 Total price:
                 {keys(productsInCart).reduce(
                     (total, productId) =>

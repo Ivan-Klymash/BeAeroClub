@@ -72,7 +72,11 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="footer-button">
-                            <a href="#top" className="back-to-top"></a>
+                            <a
+                                href="#top"
+                                title="Go back up"
+                                className="back-to-top"
+                            ></a>
                         </div>
                     </div>
                 </div>

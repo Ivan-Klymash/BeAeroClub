@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 const useStyles = makeStyles(() => ({
     media: {
         width: 150,
-        height: '100%',
+        height: '90%',
         paddingRight: 5,
     },
     cardWrap: {

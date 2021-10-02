@@ -5,41 +5,15 @@ import ProductListItem from '../../../components/Products/ProductListItem'
 import PropTypes from 'prop-types'
 import Testemonials from '../../../components/Testimonials/Testimonials'
 import { connect } from 'react-redux'
-import { makeStyles } from '@material-ui/core'
-
-const useStyles = makeStyles({
-    offer: {
-        backgroundImage: 'url(images/offer.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        height: '480px',
-        position: 'relative',
-    },
-})
+import OfferPageHeader from '../OfferPageHeader'
 
 const Recreation = ({ addProductToCart, productsArray }) => {
-    const classes = useStyles()
     if (productsArray.length === 0) {
         return null
     } else {
         return (
             <>
-                <div className={classes.offer}>
-                    <span>
-                        <i
-                            style={{
-                                color: 'white',
-                                fontSize: 28,
-                                position: 'absolute',
-                                top: 'calc(50% - 100px)',
-                                left: '6%',
-                            }}
-                        >
-                            You can buy our certificates <br /> and attend our
-                            courses
-                        </i>
-                    </span>
-                </div>
+                <OfferPageHeader />
                 <h2
                     style={{
                         textAlign: 'center',
@@ -55,7 +29,7 @@ const Recreation = ({ addProductToCart, productsArray }) => {
                     direction="row"
                     justifyContent="space-evenly"
                     alignItems="center"
-                    spacing={1}
+                    // spacing={1}
                 >
                     {productsArray
                         .filter((item) => item.category === 'recreation')

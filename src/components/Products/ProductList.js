@@ -34,6 +34,17 @@ const useStyles = makeStyles({
         color: '#0d2156',
         margin: '0 1% 40px',
     },
+
+    '@media (max-width: 426px)': {
+        aboutLeftColumnText: {
+            margin: '0px 20px 0px 40px',
+        },
+        aboutRightColumnText: {
+            padding: '0px',
+            fontSize: '15px',
+            lineHeight: '25px',
+        },
+    },
 })
 
 const ProductsList = ({ productsArray }) => {
@@ -60,7 +71,9 @@ const ProductsList = ({ productsArray }) => {
                     aliqunim ad minim veniam exe
                 </Typography>
             </div>
-
+            <h5 style={{ textAlign: 'center', margin: '20px 0px' }}>
+                <b>Buy a certificate for the tour:</b>
+            </h5>
             <Grid
                 container
                 direction="row"

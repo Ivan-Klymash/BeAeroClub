@@ -20,7 +20,8 @@ const StorySection = () => {
                                 justo fringilla imperdiet id ac magna.
                                 Suspendisse vel facilisis odio, at ornare nibh.
                             </p>
-                            <a href="">Read more</a>
+
+                            <a href="http://localhost:3000/story">Read more</a>
                         </div>
                     </div>
                     <div className="story-photo half-a-page"></div>
@@ -34,14 +35,14 @@ const StorySection = () => {
                     </div>
                     <div className="what-we-do-button">
                         <div className="what-we-do-left-button">
-                            <a href="">
+                            <a href="http://localhost:3000/flights">
                                 <span className="what-we-do-left-button-text">
                                     Read more
                                 </span>
                             </a>
                         </div>
                         <div className="what-we-do-right-button">
-                            <a href="">
+                            <a href="http://localhost:3000/flights">
                                 <span className="what-we-do-right-button-text">
                                     Read more
                                 </span>

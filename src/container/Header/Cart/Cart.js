@@ -7,8 +7,9 @@ import { connect } from 'react-redux'
 const Cart = ({ productsInCart }) => {
     return (
         <>
-            <div>
+            <div style={{ backgroundColor: 'rgb(208 221 238)' }}>
                 <CartProductList productsInCart={productsInCart} />
+                <br />
                 <CartTotal productsInCart={productsInCart} />
             </div>
         </>

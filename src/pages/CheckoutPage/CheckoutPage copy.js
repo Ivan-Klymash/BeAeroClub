@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './CheckoutPage.css'
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline'
 import Cart from '../../container/Header/Cart/Cart'
-import './CheckoutPage.css'
+import { Button } from '@material-ui/core'
 
 class CheckoutPage extends Component {
     state = {
@@ -23,6 +24,7 @@ class CheckoutPage extends Component {
             surname: e.target.value,
         })
     }
+
     orderAddress = (e) => {
         this.setState({
             address: e.target.value,
@@ -61,20 +63,18 @@ class CheckoutPage extends Component {
     renderForm = () => {
         return (
             <>
-                <h4>Order:</h4>
-                <Cart></Cart>
-                <hr />
+                <h2>Checkout Form</h2>
                 <div className="form-order">
-                    <h2>Checkout Form </h2>
-                    <p>
+                    <p className="contact-details">
                         <ErrorOutlineIcon
                             fontSize="small"
                             className="necessarily"
                         />
-                        Enter your contact information:
+                        Your contact details:
                     </p>
+
                     <form onSubmit={this.sendForm} className="checkout-form">
-                        <div className="form-input">
+                        <div>
                             <input
                                 type="text"
                                 placeholder="Your name"
@@ -110,62 +110,46 @@ class CheckoutPage extends Component {
                                 onChange={this.orderPhone}
                             />
                         </div>
-                        <i
-                            style={{
-                                padding: '20px 0px 0px 0px',
-                                display: 'block',
-                            }}
-                        >
-                            We will phone you to access your items.
-                        </i>
                         <br />
                         <button type="submit" className="form-submit">
                             Send
                         </button>
-                        <button type="reset" className="form-reset">
-                            {/* $
-                            {'.form-reset'.onClick(function () {
-                                '.checkout-form'.find('input').val('')
-                            })} */}
+                        <button type="reset" htmlFor="tel" value="Reset Form">
                             Reset
                         </button>
                     </form>
                 </div>
                 <hr />
-                <div className="payment">
-                    <h3>Select payment method:</h3>
-                    <p className="paymentParagraph">
-                        <input type="radio" name="payment" />
-                        Payment upon receipt of the goods
-                    </p>
-
-                    <p className="form-input">
-                        <input type="radio" name="payment" />
-                        Online payment card
-                        <div>
-                            <input type="email" placeholder="your email" />
-                        </div>
-                    </p>
-
-                    <p className="form-input">
-                        <input type="radio" name="payment" />
-                        Google Pay
-                        <div>
-                            <input type="email" placeholder="your email" />
-                        </div>
-                    </p>
-                    <button type="submit" className="form-submit">
-                        Send
-                    </button>
-                </div>
+                <h4>Order:</h4>
+                <Cart></Cart>
                 <hr />
+                <h4>Delivery:</h4>
+                <p>
+                    <input type="radio" name="delivery" />
+                    Self-pickup from the department of postal operators:
+                </p>
+                <input type="searsh" placeholder="find the delivery point" />
+                <p>
+                    <input type="radio" name="delivery" /> Delivery by courier:
+                    <br />
+                    <span className="courier-time">
+                        choose a convenient courier delivery time for you
+                    </span>
+                </p>
+                <input type="date" />
+                <hr />
+                <Button variant="contained">I confirm the order</Button>
+                <h6>
+                    By confirming the order, I accept
+                    <a href=""> the terms of the user agreement</a>
+                </h6>
             </>
         )
     }
 
     renderMessage = () => {
         return (
-            <div style={{ backgroundColor: 'rgb(208 221 238)' }}>
+            <div>
                 Dear {this.state.name}, thanks for your order!
                 <div>Delivery address: {this.state.address}</div>
                 <div>We will call you at the number: {this.state.phone} </div>
@@ -184,7 +168,8 @@ class CheckoutPage extends Component {
     render() {
         return (
             <>
-                <h1 style={{ textAlign: 'center' }}>Checkout Page</h1>
+                <h1 className="checkout-title">Checkout Page</h1>
+                {/* {console.log(this.state)} */}
                 {this.state.isOrderSend !== true
                     ? this.renderForm()
                     : this.renderMessage()}

@@ -5,8 +5,8 @@ import Main from './Main/Main'
 import Footer from './Footer/Footer'
 import { useDispatch } from 'react-redux'
 import { fetchProducts } from '../redux/products.action'
-// import Slider from './Main/Slider/Slider'
 import Slider from './Main/Slider/Carousel'
+import { Route } from 'react-router-dom'
 
 const App = () => {
     useEffect(() => {
@@ -19,8 +19,7 @@ const App = () => {
         <>
             <CssBaseline />
             <Header />
-            <Slider />
-            {/* <Slider /> */}
+            <Route path="/" exact component={Slider} />
             <Main />
             <Footer />
         </>

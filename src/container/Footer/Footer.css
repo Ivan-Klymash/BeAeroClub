@@ -2,14 +2,14 @@
     color: #0d2156;
 }
 .footer-wraper {
-    max-width: 1060px;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 0 0px;
+    padding: 60px 0px 0px;
 }
 .footer-row {
     display: flex;
     flex-wrap: wrap;
+
 }
 .column {
     width: 23%;
@@ -110,4 +110,20 @@ background-color: #dfe7ee
 .hidden-button:hover {
     background-color: #048bda;
     color: #f7f7f7;
+}
+
+@media screen and (max-width: 426px) {
+    .footer-row {
+        flex-direction:column;
+    }
+    .column {
+        margin: 0 10% 40px;
+        width: auto;
+    }
+    .widget-text-number {
+        font-size: 22px;
+    }
+    .footer-column {
+    flex-direction: column;
+    }
 }

@@ -14,10 +14,6 @@ const useStyles = makeStyles(() => ({
             color: '#048bda',
         },
     },
-    list: {
-        listStyle: 'none',
-        padding: 0,
-    },
 }))
 
 const Submenu = () => {
@@ -26,7 +22,7 @@ const Submenu = () => {
     return (
         <>
             <div className="submenu">
-                <ul className={classes.list}>
+                <ul className="list">
                     <li>
                         <Link to="/flights" className={classes.subMenuLink}>
                             Flights

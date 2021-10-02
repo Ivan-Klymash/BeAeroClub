@@ -29,6 +29,21 @@ const useStyles = makeStyles(() => ({
     link: {
         color: 'white',
         textDecoration: 'none',
+        '&:hover': {
+            color: 'white',
+        },
+    },
+    '@media screen and (max-width: 426px)': {
+        menu: {
+            display: 'none',
+            fontSize: 12,
+        },
+        menuDown: {
+            display: 'none',
+        },
+        rightColumnButton: {
+            display: 'none',
+        },
     },
     menuDown: {
         marginTop: 5,
@@ -38,7 +53,7 @@ const useStyles = makeStyles(() => ({
     },
 }))
 
-const Menu = ({ likesNumber }) => {
+const Menu = ({ productsInFavorite }) => {
     const classes = useStyles()
     return (
         <>
@@ -72,7 +87,8 @@ const Menu = ({ likesNumber }) => {
             </Button>
             <Button color="inherit" className={classes.menuDown}>
                 <Link to="/favorite" className={classes.link}>
-                    <FavoriteIcon />({likesNumber})
+                    <FavoriteIcon />
+                    {productsInFavorite}
                 </Link>
             </Button>
 
@@ -83,14 +99,21 @@ const Menu = ({ likesNumber }) => {
             </Button>
 
             <Button color="inherit" className={classes.rightColumnButton}>
-                Buy now
+                <a
+                    className={classes.link}
+                    href="https://1.envato.market/c/1289117/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbetheme-responsive-multipurpose-wordpress-theme%2F7758048%3Fref%3Dmuffingroup"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Buy now
+                </a>
             </Button>
         </>
     )
 }
 
 Menu.propTypes = {
-    likesNumber: PropTypes.number,
+    productsInFavorite: PropTypes.number,
 }
 
 export default Menu

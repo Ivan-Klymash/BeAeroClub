@@ -10,6 +10,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 
 const ProductListItem = ({
     id,
@@ -25,6 +26,7 @@ const ProductListItem = ({
     isLiked = false,
     addLike,
     removeLike,
+    addProductToFavorite,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -48,12 +50,21 @@ const ProductListItem = ({
                 >
                     {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                 </Button>
+                <Button onClick={() => addProductToFavorite(id)}>CHECK</Button>
                 <div className="category">
                     <h4>
                         <Link to={`/products/${id}`}>{name}</Link>
                     </h4>
                     <Button variant="text" color="secondary">
-                        {category}
+                        <Link
+                            to={category}
+                            style={{
+                                textDecoration: 'none',
+                                color: '#f50057',
+                            }}
+                        >
+                            {category}
+                        </Link>
                     </Button>
                 </div>
                 <p>{description}</p>
@@ -73,6 +84,7 @@ const ProductListItem = ({
                     color="secondary"
                     onClick={() => addProductToCart(id, count)}
                 >
+                    <AddShoppingCartIcon style={{ marginRight: 10 }} />
                     Add to cart
                 </Button>
             </CardActions>
@@ -94,6 +106,7 @@ ProductListItem.propTypes = {
     isLiked: PropTypes.bool,
     addLike: PropTypes.func,
     removeLike: PropTypes.func,
+    addProductToFavorite: PropTypes.func,
 }
 
 ProductListItem.defaultProps = {
@@ -121,6 +134,11 @@ const mapDispatchToProps = (dispatch) => ({
             type: 'ADD_PRODUCT_TO_CART',
             id,
             count,
+        }),
+    addProductToFavorite: (id) =>
+        dispatch({
+            type: 'ADD_PRODUCT_TO_FAVORITE',
+            id,
         }),
 })
 

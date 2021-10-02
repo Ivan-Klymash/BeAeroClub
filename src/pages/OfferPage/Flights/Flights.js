@@ -5,52 +5,15 @@ import ProductListItem from '../../../components/Products/ProductListItem'
 import PropTypes from 'prop-types'
 import Testemonials from '../../../components/Testimonials/Testimonials'
 import { connect } from 'react-redux'
-import { makeStyles } from '@material-ui/core'
-
-const useStyles = makeStyles({
-    offer: {
-        backgroundImage: 'url(images/offer.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        height: '480px',
-        position: 'relative',
-    },
-})
+import OfferPageHeader from '../OfferPageHeader'
 
 const Flights = ({ productsArray }) => {
-    const classes = useStyles()
     if (productsArray.length === 0) {
         return null
     } else {
         return (
             <>
-                <div className={classes.offer}>
-                    <span>
-                        <i
-                            style={{
-                                color: 'white',
-                                fontSize: 28,
-                                position: 'absolute',
-                                top: 'calc(50% - 100px)',
-                                left: '6%',
-                            }}
-                        >
-                            You can buy our certificates <br /> and attend our
-                            courses
-                        </i>
-                    </span>
-                </div>
-                <section>
-                    <video
-                        width="750"
-                        height="500"
-                        autoPlay
-                        controls
-                        src="https://www.youtube.com/watch?v=z0jjTU-H43M"
-                        poster="https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-about-play-movie.jpg"
-                    ></video>
-                </section>
-
+                <OfferPageHeader />
                 <h2
                     style={{
                         textAlign: 'center',
@@ -58,7 +21,13 @@ const Flights = ({ productsArray }) => {
                 >
                     Flights:
                 </h2>
-                <p style={{ textAlign: 'center', fontSize: 18 }}>
+                <p
+                    style={{
+                        textAlign: 'center',
+                        fontSize: 18,
+                        padding: '0 2px',
+                    }}
+                >
                     <ins>
                         Parachuting courses, flights, sky diving and more...
                     </ins>
@@ -68,7 +37,7 @@ const Flights = ({ productsArray }) => {
                     direction="row"
                     justifyContent="space-evenly"
                     alignItems="center"
-                    spacing={1}
+                    // spacing={1}
                 >
                     {productsArray
                         .filter((item) => item.category === 'flights')

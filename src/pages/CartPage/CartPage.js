@@ -1,16 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Grid } from '@material-ui/core'
+import { Button, Grid } from '@material-ui/core'
 import CartTotal from '../../components/Cart/CartTotal'
 import CartProductList from '../../components/Cart/CartProductList'
 import CartProductListItemExtended from '../../components/Cart/CartProductListItemExtended'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+const buttonStyle = {
+    textDecoration: 'none',
+    color: 'black',
+}
+
 const CartPage = ({ productsInCart }) => {
     return (
         <>
-            <h1>Cart Page</h1>
+            <h1 style={{ textAlign: 'center' }}>Cart Page</h1>
             <Grid container spacing={2}>
                 <CartProductList
                     productsInCart={productsInCart}
@@ -18,7 +23,26 @@ const CartPage = ({ productsInCart }) => {
                 />
             </Grid>
             <CartTotal productsInCart={productsInCart} />
-            <Link to="/checkout"> Proceed to checkout </Link>
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    paddingTop: 40,
+                    paddingBottom: 10,
+                    backgroundColor: 'rgb(208 221 238)',
+                }}
+            >
+                <Button variant="contained">
+                    <Link to="/" style={buttonStyle}>
+                        Continue shopping
+                    </Link>
+                </Button>
+                <Button variant="contained">
+                    <Link to="/checkout" style={buttonStyle}>
+                        Secure checkout
+                    </Link>
+                </Button>
+            </div>
         </>
     )
 }

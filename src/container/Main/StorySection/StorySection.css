@@ -104,7 +104,6 @@
     overflow: hidden;
     text-decoration: none;
     cursor: pointer;
-    /* border-style: solid; */
     transition: color .1s ease-in-out,
     background-color .1s ease-in-out,
     border-color .1s ease-in-out;
@@ -133,4 +132,111 @@
 }
 .what-we-do-right-button:hover {
     opacity: 0.5;
+}
+
+@media screen and (max-width: 426px) {
+    .row-story {
+        display: block;
+    }
+    .half-a-page {
+        width: 96%;
+    }
+    .story-text {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .story-text-title {
+        padding-top: 0px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .story-photo  {
+        width: 94%;
+        height: 230px;
+    margin: 0 auto;
+        background-size: contain;
+    }
+    .what-we-do-text p {
+    font-size: 24px;
+    line-height: 30px;
+    }
+
+}
+
+/* StoryPage */
+.storyBackgroundImage {
+    background-image: url(../../../assets//background-images/fly-version-1.jpg);
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover;
+    position: relative;
+    /* width: 100%; */
+    height: 90vh;
+}
+.storyPageImg {
+    display: block;
+    margin: 0 20px;
+    height: 60vh;
+    width: auto;
+}
+.storyPageImg:hover {
+     transform: scale(1.06);
+    transition: all .3s ease-in-out;
+}
+.storyPageButton {
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.story-page-bgimg {
+    background-image: url(https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclubb-story-kites.jpg);
+    background-repeat: no-repeat;
+    background-position: center  ;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    margin-top: 20px;
+}
+.story-page-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.story-page-progress {
+    height: 10px;
+    width: 100%;
+    position: relative;
+    background-color: #d2d2d2;
+}
+.story-page-progress-line {
+    width: 75%;
+    background-color: #ff0e0e;
+    display: block;
+    height: 100%;
+    animation: fadeInLeft;
+    animation-duration: 4s;
+}
+.story-page-img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.fixed, .area {
+    width: 100%;
+    height: 90vh;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+}
+.fixed {
+    background-attachment: fixed;
+}
+.area {
+    height: 90vh;
+    width: 100%;
+}
+@media screen and (max-width: 426px) {
+    .MuiGrid-spacing-xs-2 {
+        width: 90% ;
+        margin: 0px;
+    }
 }

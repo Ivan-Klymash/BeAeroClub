@@ -1,0 +1,77 @@
+.checkout-title {
+    width: auto;
+    text-align: center;
+}
+
+.form-order {
+    background-color: rgb(48, 35, 161);
+    width: auto;
+    text-align: center;
+    color: white;
+    border-image: stretch;
+}
+
+.necessarily {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.checkout-form input {
+    text-align: center;
+    outline: none;
+    width: auto;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+.form-submit {
+    margin: 0 20px 10px 0px;
+    border: none;
+}
+.form-reset{
+    margin: 0 0px 10px 20px;
+    border: none;
+}
+.form-submit:hover  {
+    background-color: rgb(0 203 203);
+    color: white;
+}
+.form-reset:hover  {
+    background-color: rgb(0 203 203);
+    color: white;
+}
+.courier-time {
+    font-size: 13px;
+    font-style: italic;
+}
+.form-input{
+    display: block;
+    text-align: center;
+}
+
+.payment {
+    text-align: center;
+}
+.paymentParagraph{
+    text-align: center;
+}
+
+.first-letter::first-letter{
+    color: #0024b4;
+    font-size: 60px;
+    line-height: 60px;
+    width: 70px;
+    padding: 6px;
+    float: left;
+}
+.first-letter::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.social-networks{
+    color: grey;
+}
+.social-networks:hover{
+    color: blue;
+}
