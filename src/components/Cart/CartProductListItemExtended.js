@@ -45,6 +45,7 @@ const CartProductListItemExtended = ({
                                 <FavoriteBorderIcon />
                             )}
                         </Button>
+
                         <h4 className={classes.title}>{product.name}</h4>
                         <p>
                             Price for one certificate:

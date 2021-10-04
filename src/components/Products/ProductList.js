@@ -47,7 +47,7 @@ const useStyles = makeStyles({
     },
 })
 
-const ProductsList = ({ productsArray }) => {
+const ProductsList = ({ productsArray, changeLike }) => {
     const classes = useStyles()
     return (
         <>
@@ -104,6 +104,7 @@ const ProductsList = ({ productsArray }) => {
                                 price={price}
                                 image={image}
                                 category={category}
+                                changeLike={changeLike}
                             />
                         </Grid>
                     )

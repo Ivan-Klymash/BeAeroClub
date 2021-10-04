@@ -31,7 +31,13 @@ const StoryPage = () => {
                 alignItems="center"
                 // spacing={1}
             >
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    style={{ marginBottom: '20px' }}
+                >
                     <Card className="storyPageImg">
                         <a
                             href="https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-story-gallery-1.jpg"
@@ -45,7 +51,14 @@ const StoryPage = () => {
                         </a>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
+
+                <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    style={{ marginBottom: '20px' }}
+                >
                     <Card className="storyPageImg">
                         <a
                             href="https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-story-gallery-2.jpg"
@@ -59,7 +72,14 @@ const StoryPage = () => {
                         </a>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
+
+                <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    style={{ marginBottom: '20px' }}
+                >
                     <Card className="storyPageImg">
                         <a
                             href="https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-story-gallery-3.jpg"

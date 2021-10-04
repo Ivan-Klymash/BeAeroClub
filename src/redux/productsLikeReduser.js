@@ -10,7 +10,6 @@ const productsLikeReduser = (state = {}, action) => {
                 ...state,
                 [action.id]: false,
             }
-
         default:
             return state
     }

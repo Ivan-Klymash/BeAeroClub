@@ -15,7 +15,7 @@ import LearnToFlySection from './LearnToFlySection/LearnToFlySection'
 import OfferSection from './OfferSection/OfferSection'
 import FavoritePage from '../../pages/FavoritePage/FavoritePage'
 
-const Main = () => {
+const Main = ({ changeLike }) => {
     return (
         <>
             <Container>
@@ -25,17 +25,25 @@ const Main = () => {
                         exact
                         render={() => (
                             <>
-                                <ProductsList />
+                                <ProductsList changeLike={changeLike} />
                             </>
                         )}
                     />
                     <Route path="/cart" exact component={CartPage} />
                     <Route path="/products/:id" exact component={ProductPage} />
                     <Route path="/checkout" component={CheckoutPage} />
-                    <Route path="/favorite" exact component={FavoritePage} />
+                    <Route
+                        path="/favorite"
+                        exact
+                        render={() => (
+                            <>
+                                <FavoritePage changeLike={changeLike} />
+                            </>
+                        )}
+                    />
                 </Switch>
             </Container>
-            <OfferPage />
+            <OfferPage changeLike={changeLike} />
             <Route path="/news" exact component={NewsPage} />
             <Route path="/story" exact component={StoryPage} />
             <Route path="/" exact component={StorySection} />
@@ -51,7 +59,7 @@ Main.propTypes = {
     productsInCart: PropTypes.object,
     removeProductFromCart: PropTypes.func,
     changeProductQuantity: PropTypes.func,
-    likeButtonsState: PropTypes.object,
+    changeLike: PropTypes.func,
 }
 
 export default Main

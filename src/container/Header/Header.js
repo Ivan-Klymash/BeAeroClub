@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const Header = ({ productsInFavorite }) => {
+const Header = ({ likesLength }) => {
     const classes = useStyles()
     const theme = useTheme()
 
@@ -153,7 +153,7 @@ const Header = ({ productsInFavorite }) => {
                             <MenuIcon />
                         </IconButton>
                         <Logo id="top" />
-                        <Menu productsInFavorite={productsInFavorite} />
+                        <Menu likesLength={likesLength} />
                     </Toolbar>
                 </Container>
             </AppBar>
@@ -253,6 +253,6 @@ const Header = ({ productsInFavorite }) => {
 
 Header.propTypes = {
     productsInCart: PropTypes.object,
-    productsInFavorite: PropTypes.object,
+    likesLength: PropTypes.number,
 }
 export default Header

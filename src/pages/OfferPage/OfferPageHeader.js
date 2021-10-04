@@ -47,6 +47,7 @@ const OfferPageHeader = () => {
             </div>
             <section className={classes.video}>
                 <a
+                    style={{ width: '100%' }}
                     href="https://www.youtube.com/watch?v=z0jjTU-H43M"
                     target="_blank"
                     rel="noreferrer"
@@ -55,7 +56,7 @@ const OfferPageHeader = () => {
                     <video
                         width="60%"
                         preload="metodata"
-                        controls
+                        // controls
                         poster="https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-about-play-movie.jpg"
                     ></video>
                 </a>

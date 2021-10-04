@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     contactBgImg: {
         backgroundImage:
             'url(https://themes.muffingroup.com/be/aeroclub/wp-content/uploads/2018/11/aeroclub-contact-mountains-bg.jpg)',
-        height: '60vh',
+        height: '75vh',
         width: '100%',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -100,7 +100,7 @@ const ContactPage = () => {
                     style={{
                         color: 'white',
                         paddingLeft: '10%',
-                        paddingTop: '50px',
+                        paddingTop: '35px',
                     }}
                 >
                     Lets do something great together

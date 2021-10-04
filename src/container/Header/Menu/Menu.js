@@ -53,7 +53,7 @@ const useStyles = makeStyles(() => ({
     },
 }))
 
-const Menu = ({ productsInFavorite }) => {
+const Menu = ({ likesLength }) => {
     const classes = useStyles()
     return (
         <>
@@ -87,8 +87,7 @@ const Menu = ({ productsInFavorite }) => {
             </Button>
             <Button color="inherit" className={classes.menuDown}>
                 <Link to="/favorite" className={classes.link}>
-                    <FavoriteIcon />
-                    {productsInFavorite}
+                    <FavoriteIcon />({likesLength})
                 </Link>
             </Button>
 
@@ -113,7 +112,7 @@ const Menu = ({ productsInFavorite }) => {
 }
 
 Menu.propTypes = {
-    productsInFavorite: PropTypes.number,
+    likesLength: PropTypes.number,
 }
 
 export default Menu

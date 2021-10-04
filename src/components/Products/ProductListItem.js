@@ -26,7 +26,9 @@ const ProductListItem = ({
     isLiked = false,
     addLike,
     removeLike,
-    addProductToFavorite,
+    changeLike,
+    //
+    // productsInFavorite,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -39,56 +41,61 @@ const ProductListItem = ({
     }
 
     return (
-        <Card id="relux">
-            <CardContent>
-                <div className="service-img">
-                    <img src={image} />
-                </div>
-                <Button
-                    variant="outlined"
-                    onClick={() => (isLiked ? removeLike(id) : addLike(id))}
-                >
-                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                </Button>
-                <Button onClick={() => addProductToFavorite(id)}>CHECK</Button>
-                <div className="category">
-                    <h4>
-                        <Link to={`/products/${id}`}>{name}</Link>
-                    </h4>
-                    <Button variant="text" color="secondary">
-                        <Link
-                            to={category}
-                            style={{
-                                textDecoration: 'none',
-                                color: '#f50057',
-                            }}
-                        >
-                            {category}
-                        </Link>
+        <>
+            <Card id="relux">
+                <CardContent>
+                    <div className="service-img">
+                        <img src={image} />
+                    </div>
+                    <Button
+                        variant="outlined"
+                        onClick={() =>
+                            isLiked
+                                ? removeLike(id) && changeLike(id)
+                                : addLike(id) && changeLike(id)
+                        }
+                    >
+                        {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                     </Button>
-                </div>
-                <p>{description}</p>
-                <div> Number of people: {quantity}</div>
-                <div> Time: {time} minutes </div>
-                <div> Age: {age}</div>
-                <div className="service-price">{price} $</div>
-                <Quantity
-                    count={count}
-                    onDecrementClick={onDecrementClick}
-                    onIncrementClick={onIncrementClick}
-                />
-            </CardContent>
-            <CardActions className="btn-wrap">
-                <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={() => addProductToCart(id, count)}
-                >
-                    <AddShoppingCartIcon style={{ marginRight: 10 }} />
-                    Add to cart
-                </Button>
-            </CardActions>
-        </Card>
+                    <div className="category">
+                        <h4>
+                            <Link to={`/products/${id}`}>{name}</Link>
+                        </h4>
+                        <Button variant="text" color="secondary">
+                            <Link
+                                to={category}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: '#f50057',
+                                }}
+                            >
+                                {category}
+                            </Link>
+                        </Button>
+                    </div>
+                    <p>{description}</p>
+                    <div> Number of people: {quantity}</div>
+                    <div> Time: {time} minutes </div>
+                    <div> Age: {age}</div>
+                    <div className="service-price">{price} $</div>
+                    <Quantity
+                        count={count}
+                        onDecrementClick={onDecrementClick}
+                        onIncrementClick={onIncrementClick}
+                    />
+                </CardContent>
+                <CardActions className="btn-wrap">
+                    <Button
+                        variant="contained"
+                        color="secondary"
+                        onClick={() => addProductToCart(id, count)}
+                    >
+                        <AddShoppingCartIcon style={{ marginRight: 10 }} />
+                        Add to cart
+                    </Button>
+                </CardActions>
+            </Card>
+        </>
     )
 }
 
@@ -106,7 +113,9 @@ ProductListItem.propTypes = {
     isLiked: PropTypes.bool,
     addLike: PropTypes.func,
     removeLike: PropTypes.func,
-    addProductToFavorite: PropTypes.func,
+    changeLike: PropTypes.func,
+    //
+    productsInFavorite: PropTypes.func,
 }
 
 ProductListItem.defaultProps = {
@@ -134,11 +143,6 @@ const mapDispatchToProps = (dispatch) => ({
             type: 'ADD_PRODUCT_TO_CART',
             id,
             count,
-        }),
-    addProductToFavorite: (id) =>
-        dispatch({
-            type: 'ADD_PRODUCT_TO_FAVORITE',
-            id,
         }),
 })
 
