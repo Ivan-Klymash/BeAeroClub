@@ -13,9 +13,8 @@ import CheckoutPage from '../../pages/CheckoutPage/CheckoutPage'
 import StorySection from './StorySection/StorySection'
 import LearnToFlySection from './LearnToFlySection/LearnToFlySection'
 import OfferSection from './OfferSection/OfferSection'
-import FavoritePage from '../../pages/FavoritePage/FavoritePage'
 
-const Main = ({ changeLike }) => {
+const Main = ({ changeLike, changeNumber }) => {
     return (
         <>
             <Container>
@@ -25,25 +24,19 @@ const Main = ({ changeLike }) => {
                         exact
                         render={() => (
                             <>
-                                <ProductsList changeLike={changeLike} />
+                                <ProductsList
+                                    changeLike={changeLike}
+                                    changeNumber={changeNumber}
+                                />
                             </>
                         )}
                     />
                     <Route path="/cart" exact component={CartPage} />
                     <Route path="/products/:id" exact component={ProductPage} />
                     <Route path="/checkout" component={CheckoutPage} />
-                    <Route
-                        path="/favorite"
-                        exact
-                        render={() => (
-                            <>
-                                <FavoritePage changeLike={changeLike} />
-                            </>
-                        )}
-                    />
                 </Switch>
             </Container>
-            <OfferPage changeLike={changeLike} />
+            <OfferPage changeLike={changeLike} changeNumber={changeNumber} />
             <Route path="/news" exact component={NewsPage} />
             <Route path="/story" exact component={StoryPage} />
             <Route path="/" exact component={StorySection} />
@@ -55,11 +48,11 @@ const Main = ({ changeLike }) => {
 }
 
 Main.propTypes = {
-    addProductToCart: PropTypes.func,
     productsInCart: PropTypes.object,
     removeProductFromCart: PropTypes.func,
     changeProductQuantity: PropTypes.func,
     changeLike: PropTypes.func,
+    changeNumber: PropTypes.func,
 }
 
 export default Main

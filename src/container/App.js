@@ -17,8 +17,21 @@ const App = () => {
             [id]: !prevState[id],
         }))
     }
+
     const likesLength = Object.keys(likeButtonsState).filter(
         (item) => likeButtonsState[item] === true
+    ).length
+
+    const [cartState, setCartState] = useState({})
+    const changeNumber = (id) => {
+        setCartState((prevState) => ({
+            ...prevState,
+            [id]: !prevState[id],
+        }))
+    }
+
+    const cartLength = Object.keys(cartState).filter(
+        (item) => cartState[item] === true
     ).length
 
     useEffect(() => {
@@ -30,9 +43,9 @@ const App = () => {
     return (
         <>
             <CssBaseline />
-            <Header likesLength={likesLength} />
+            <Header likesLength={likesLength} cartLength={cartLength} />
             <Route path="/" exact component={Slider} />
-            <Main changeLike={changeLike} />
+            <Main changeLike={changeLike} changeNumber={changeNumber} />
             <Footer />
         </>
     )

@@ -167,11 +167,11 @@
 .storyBackgroundImage {
     background-image: url(../../../assets//background-images/fly-version-1.jpg);
     background-repeat: no-repeat;
-    background-position:center ;
+    background-position: center ;
     background-size: cover;
     position: relative;
     /* width: 100%; */
-    height: 90vh;
+    height: 75vh;
 }
 .storyPageImg {
     display: block;

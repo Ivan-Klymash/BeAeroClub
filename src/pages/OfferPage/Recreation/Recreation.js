@@ -7,7 +7,7 @@ import Testemonials from '../../../components/Testimonials/Testimonials'
 import { connect } from 'react-redux'
 import OfferPageHeader from '../OfferPageHeader'
 
-const Recreation = ({ addProductToCart, productsArray, changeLike }) => {
+const Recreation = ({ productsArray, changeLike, changeNumber }) => {
     if (productsArray.length === 0) {
         return null
     } else {
@@ -54,8 +54,8 @@ const Recreation = ({ addProductToCart, productsArray, changeLike }) => {
                                         age={age}
                                         price={price}
                                         image={image}
-                                        addProductToCart={addProductToCart}
                                         changeLike={changeLike}
+                                        changeNumber={changeNumber}
                                     />
                                 </Grid>
                             )
@@ -71,6 +71,7 @@ Recreation.propTypes = {
     addProductToCart: PropTypes.func,
     productsArray: PropTypes.array,
     changeLike: PropTypes.func,
+    changeNumber: PropTypes.func,
 }
 
 const mapStateToProps = (state) => ({

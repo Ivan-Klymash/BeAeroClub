@@ -5,7 +5,7 @@ import Adrenalin from '../OfferPage/Adrenalin/Adrenalin'
 import Recreation from '../OfferPage/Recreation/Recreation'
 import PropTypes from 'prop-types'
 
-const OfferPage = ({ changeLike }) => {
+const OfferPage = ({ changeLike, changeNumber }) => {
     return (
         <>
             <Switch>
@@ -14,7 +14,10 @@ const OfferPage = ({ changeLike }) => {
                     exact
                     render={() => (
                         <>
-                            <Flights changeLike={changeLike} />
+                            <Flights
+                                changeLike={changeLike}
+                                changeNumber={changeNumber}
+                            />
                         </>
                     )}
                 />
@@ -23,7 +26,10 @@ const OfferPage = ({ changeLike }) => {
                     exact
                     render={() => (
                         <>
-                            <Adrenalin changeLike={changeLike} />
+                            <Adrenalin
+                                changeLike={changeLike}
+                                changeNumber={changeNumber}
+                            />
                         </>
                     )}
                 />
@@ -32,7 +38,10 @@ const OfferPage = ({ changeLike }) => {
                     exact
                     render={() => (
                         <>
-                            <Recreation changeLike={changeLike} />
+                            <Recreation
+                                changeLike={changeLike}
+                                changeNumber={changeNumber}
+                            />
                         </>
                     )}
                 />
@@ -42,6 +51,7 @@ const OfferPage = ({ changeLike }) => {
 }
 OfferPage.propTypes = {
     changeLike: PropTypes.func,
+    changeNumber: PropTypes.func,
 }
 
 export default OfferPage

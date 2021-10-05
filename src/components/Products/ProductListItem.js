@@ -27,8 +27,7 @@ const ProductListItem = ({
     addLike,
     removeLike,
     changeLike,
-    //
-    // productsInFavorite,
+    changeNumber,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -57,6 +56,7 @@ const ProductListItem = ({
                     >
                         {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                     </Button>
+
                     <div className="category">
                         <h4>
                             <Link to={`/products/${id}`}>{name}</Link>
@@ -86,9 +86,12 @@ const ProductListItem = ({
                 </CardContent>
                 <CardActions className="btn-wrap">
                     <Button
-                        variant="contained"
+                        variant="outlined"
                         color="secondary"
-                        onClick={() => addProductToCart(id, count)}
+                        onClick={() =>
+                            addProductToCart(id, count) &&
+                            changeNumber(id, count)
+                        }
                     >
                         <AddShoppingCartIcon style={{ marginRight: 10 }} />
                         Add to cart
@@ -114,8 +117,7 @@ ProductListItem.propTypes = {
     addLike: PropTypes.func,
     removeLike: PropTypes.func,
     changeLike: PropTypes.func,
-    //
-    productsInFavorite: PropTypes.func,
+    changeNumber: PropTypes.func,
 }
 
 ProductListItem.defaultProps = {
@@ -143,6 +145,11 @@ const mapDispatchToProps = (dispatch) => ({
             type: 'ADD_PRODUCT_TO_CART',
             id,
             count,
+        }),
+    addToFavorite: (id) =>
+        dispatch({
+            type: 'ADD_TO_FAVORITE',
+            id,
         }),
 })
 

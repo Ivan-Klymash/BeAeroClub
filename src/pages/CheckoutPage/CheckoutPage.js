@@ -64,6 +64,37 @@ class CheckoutPage extends Component {
                 <h4>Order:</h4>
                 <Cart></Cart>
                 <hr />
+                <div className="payment">
+                    <h3>Select payment method:</h3>
+                    <p className="paymentParagraph">
+                        <input type="radio" name="payment" />
+                        Payment upon receipt of the goods
+                    </p>
+
+                    <p className="form-input">
+                        <input type="radio" name="payment" />
+                        Online payment card
+                        <div>
+                            <input type="email" placeholder="your email" />
+                        </div>
+                    </p>
+
+                    <p className="form-input">
+                        <input type="radio" name="payment" />
+                        Google Pay
+                        <div>
+                            <input type="email" placeholder="your email" />
+                        </div>
+                    </p>
+                    <button
+                        type="submit"
+                        className="form-submit"
+                        onClick={() => alert('payment method selected')}
+                    >
+                        Send
+                    </button>
+                </div>
+                <hr />
                 <div className="form-order">
                     <h2>Checkout Form </h2>
                     <p>
@@ -123,40 +154,9 @@ class CheckoutPage extends Component {
                             Send
                         </button>
                         <button type="reset" className="form-reset">
-                            {/* $
-                            {'.form-reset'.onClick(function () {
-                                '.checkout-form'.find('input').val('')
-                            })} */}
                             Reset
                         </button>
                     </form>
-                </div>
-                <hr />
-                <div className="payment">
-                    <h3>Select payment method:</h3>
-                    <p className="paymentParagraph">
-                        <input type="radio" name="payment" />
-                        Payment upon receipt of the goods
-                    </p>
-
-                    <p className="form-input">
-                        <input type="radio" name="payment" />
-                        Online payment card
-                        <div>
-                            <input type="email" placeholder="your email" />
-                        </div>
-                    </p>
-
-                    <p className="form-input">
-                        <input type="radio" name="payment" />
-                        Google Pay
-                        <div>
-                            <input type="email" placeholder="your email" />
-                        </div>
-                    </p>
-                    <button type="submit" className="form-submit">
-                        Send
-                    </button>
                 </div>
                 <hr />
             </>

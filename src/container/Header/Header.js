@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const Header = ({ likesLength }) => {
+const Header = ({ likesLength, cartLength }) => {
     const classes = useStyles()
     const theme = useTheme()
 
@@ -153,7 +153,10 @@ const Header = ({ likesLength }) => {
                             <MenuIcon />
                         </IconButton>
                         <Logo id="top" />
-                        <Menu likesLength={likesLength} />
+                        <Menu
+                            likesLength={likesLength}
+                            cartLength={cartLength}
+                        />
                     </Toolbar>
                 </Container>
             </AppBar>
@@ -232,16 +235,17 @@ const Header = ({ likesLength }) => {
                             </Button>
                             <Divider />
                             <Button color="inherit" className={classes.menu}>
-                                <Link to="/favorite" className={classes.link}>
-                                    <FavoriteIcon />
-                                </Link>
+                                <a href="" className={classes.link}>
+                                    <FavoriteIcon /> ({likesLength})
+                                </a>
                             </Button>
                             <Divider />
                             <Button color="inherit" className={classes.menu}>
                                 <Link to="/cart" className={classes.link}>
-                                    <ShoppingCartIcon />
+                                    <ShoppingCartIcon />({cartLength})
                                 </Link>
                             </Button>
+
                             <Divider />
                         </ListItemText>
                     </ListItem>
@@ -254,5 +258,6 @@ const Header = ({ likesLength }) => {
 Header.propTypes = {
     productsInCart: PropTypes.object,
     likesLength: PropTypes.number,
+    cartLength: PropTypes.number,
 }
 export default Header

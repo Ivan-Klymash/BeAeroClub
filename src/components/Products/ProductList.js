@@ -47,7 +47,7 @@ const useStyles = makeStyles({
     },
 })
 
-const ProductsList = ({ productsArray, changeLike }) => {
+const ProductsList = ({ productsArray, changeLike, changeNumber }) => {
     const classes = useStyles()
     return (
         <>
@@ -105,6 +105,7 @@ const ProductsList = ({ productsArray, changeLike }) => {
                                 image={image}
                                 category={category}
                                 changeLike={changeLike}
+                                changeNumber={changeNumber}
                             />
                         </Grid>
                     )
@@ -115,9 +116,9 @@ const ProductsList = ({ productsArray, changeLike }) => {
 }
 
 ProductsList.propTypes = {
-    addProductToCart: PropTypes.func,
     changeLike: PropTypes.func,
     productsArray: PropTypes.array,
+    changeNumber: PropTypes.func,
 }
 
 const mapStateToProps = (state) => ({
