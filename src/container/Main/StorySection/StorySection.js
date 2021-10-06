@@ -1,5 +1,6 @@
 import React from 'react'
 import '../StorySection/StorySection.css'
+import { Link } from 'react-router-dom'
 
 const StorySection = () => {
     return (
@@ -21,7 +22,7 @@ const StorySection = () => {
                                 Suspendisse vel facilisis odio, at ornare nibh.
                             </p>
 
-                            <a href="http://localhost:3000/story">Read more</a>
+                            <Link to="/story">Read more </Link>
                         </div>
                     </div>
                     <div className="story-photo half-a-page"></div>
@@ -35,18 +36,18 @@ const StorySection = () => {
                     </div>
                     <div className="what-we-do-button">
                         <div className="what-we-do-left-button">
-                            <a href="http://localhost:3000/flights">
+                            <Link to="/flights">
                                 <span className="what-we-do-left-button-text">
                                     Read more
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                         <div className="what-we-do-right-button">
-                            <a href="http://localhost:3000/flights">
+                            <Link to="/flights">
                                 <span className="what-we-do-right-button-text">
                                     Read more
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

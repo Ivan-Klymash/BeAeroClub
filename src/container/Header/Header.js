@@ -66,8 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
+        width: '100%',
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen,
@@ -76,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     newMenuButton: {
         marginRight: theme.spacing(2),
     },
-    '@media (min-width: 769px)': {
+    '@media screen and (min-width: 819px)': {
         newMenuButton: {
             display: 'none',
         },
@@ -170,9 +169,10 @@ const Header = ({ likesLength, cartLength }) => {
                 classes={{
                     paper: classes.drawerPaper,
                 }}
+                onClick={handleDrawerClose}
             >
                 <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
+                    <IconButton>
                         {theme.direction === 'ltr' ? (
                             <ChevronLeftIcon />
                         ) : (

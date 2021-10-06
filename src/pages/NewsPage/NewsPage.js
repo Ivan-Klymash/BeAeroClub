@@ -17,6 +17,12 @@ const useStyles = makeStyles({
         height: '350px',
         position: 'relative',
     },
+    newsTitle: {
+        position: 'absolute',
+        top: '30%',
+        left: '30%',
+        color: 'white',
+    },
     newsImg: {
         display: 'block',
         width: '100%',
@@ -47,6 +53,11 @@ const useStyles = makeStyles({
             padding: '120px 0',
         },
     },
+    '@media (max-width: 570px)': {
+        newsTitle: {
+            left: '15%',
+        },
+    },
 })
 
 const NewsPage = () => {
@@ -54,16 +65,7 @@ const NewsPage = () => {
     return (
         <>
             <div className={classes.newsBackgroundImg}></div>
-            <h1
-                style={{
-                    position: 'absolute',
-                    top: '30%',
-                    left: '30%',
-                    color: 'white',
-                }}
-            >
-                News and events Page
-            </h1>
+            <h1 className={classes.newsTitle}>News and events Page</h1>
             <Container>
                 <Grid
                     container

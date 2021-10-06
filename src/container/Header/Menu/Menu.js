@@ -33,7 +33,7 @@ const useStyles = makeStyles(() => ({
             color: 'white',
         },
     },
-    '@media screen and (max-width: 769px)': {
+    '@media screen and (max-width: 819px)': {
         menu: {
             display: 'none',
             fontSize: 12,
@@ -41,6 +41,8 @@ const useStyles = makeStyles(() => ({
         menuDown: {
             display: 'none',
         },
+    },
+    '@media screen and (max-width:425px)': {
         rightColumnButton: {
             display: 'none',
         },
