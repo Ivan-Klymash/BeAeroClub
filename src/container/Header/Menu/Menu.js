@@ -48,7 +48,6 @@ const useStyles = makeStyles(() => ({
         },
     },
     menuDown: {
-        marginTop: 5,
         '&:hover': {
             backgroundColor: '#048bda',
         },

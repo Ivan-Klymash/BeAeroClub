@@ -106,9 +106,7 @@ const StoryPage = () => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <span className="what-we-do-left-button-text">
-                        Read more
-                    </span>
+                    <span>Read more</span>
                 </a>
             </div>
             <Grid
@@ -138,7 +136,12 @@ const StoryPage = () => {
                         <li style={{ listStyle: 'none', marginBottom: '20px' }}>
                             <h6 className=" story-page-title">
                                 Airplane design
-                                <span style={{ backgroundColor: '#d2d2d2' }}>
+                                <span
+                                    style={{
+                                        backgroundColor: '#d2d2d2',
+                                        transition: 'margin-right 2s',
+                                    }}
+                                >
                                     75 %
                                 </span>
                             </h6>
@@ -154,10 +157,7 @@ const StoryPage = () => {
                                 </span>
                             </h6>
                             <div className="story-page-progress">
-                                <span
-                                    style={{ width: '50%' }}
-                                    className="story-page-progress-line"
-                                ></span>
+                                <span className="story-page-progress-second-line"></span>
                             </div>
                         </li>
                     </ul>

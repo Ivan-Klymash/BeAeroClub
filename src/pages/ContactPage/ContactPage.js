@@ -47,7 +47,13 @@ const useStyles = makeStyles({
         padding: 4,
         marginTop: 25,
     },
-
+    phone: {
+        '&:hover': {
+            transform: 'rotate(45deg)',
+            transition: '1s',
+            cursor: 'pointer',
+        },
+    },
     contactBoxItemLink: {
         color: 'white',
     },
@@ -131,7 +137,7 @@ const ContactPage = () => {
                             </li>
                             <li style={liStyle}>
                                 <span>
-                                    <PhoneIcon />
+                                    <PhoneIcon className={classes.phone} />
                                 </span>
                                 <a
                                     style={styles}
@@ -144,7 +150,7 @@ const ContactPage = () => {
                             </li>
                             <li style={liStyle}>
                                 <span>
-                                    <PhoneIcon />
+                                    <PhoneIcon className={classes.phone} />
                                 </span>
                                 <a
                                     style={styles}
@@ -203,7 +209,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                     <h3 style={{ paddingBottom: '10px' }}>Open</h3>
-                    <p>
+                    <p className={classes.phone}>
                         Mon-Fri: 10:00 - 20:00 <br /> Sat: 10:00 - 16:00
                     </p>
                 </div>

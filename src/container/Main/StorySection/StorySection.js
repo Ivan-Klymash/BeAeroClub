@@ -22,7 +22,9 @@ const StorySection = () => {
                                 Suspendisse vel facilisis odio, at ornare nibh.
                             </p>
 
-                            <Link to="/story">Read more </Link>
+                            <Link to="/story" style={{ marginLeft: '10px' }}>
+                                Read more
+                            </Link>
                         </div>
                     </div>
                     <div className="story-photo half-a-page"></div>
